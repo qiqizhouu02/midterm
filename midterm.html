@@ -7,6 +7,8 @@
     <title> Midterm Portfolio</title>
     <link rel="stylesheet" href="midtermstyle.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -38,7 +40,8 @@
 
                     <li class="item"> Collection </li>
                     <li class="item"> About </li>
-                    <li class="item"> Contact </li>
+                    <li class="item">
+                        <a href="contact.html"> Contact </a> </li>
             </ul>
         </nav>
     </div>
@@ -50,12 +53,12 @@
 
 
     <!--Images -->
-    <div class="Images">
+    <div class=" Images ">
 
-        <div class="Figure">
-            <img class="pics" src="photos/Air copy.JPG" alt="Air copy" />
-            <div class="overlay">
-                <a class="text" id="a" onmouseover="app.changeText2Color(this)" onmouseout="app.changeTextBack(this)" ref=" project.html "> No Air </a>
+        <div class="Figure " id="figure">
+            <img class="pics " src="photos/Air copy.JPG " alt="Air copy " />
+            <div class="overlay ">
+                <a class="text " id="a " onmouseover="app.changeText2Color(this) " onmouseout="app.changeTextBack(this) " href="project.html"> No Air </a>
             </div>
         </div>
 
@@ -63,7 +66,7 @@
         <div class="Figure ">
             <img class="pics " src="photos/Windows & Souls 1_1.jpg " alt="Windows " />
             <div class="overlay ">
-                <a class="text " id="b" onmouseover="app.changeText2Color(this)" onmouseout="app.changeTextBack(this)" href="https://www.instagram.com/ "> Windows & Souls </a>
+                <a class="text " id="b " onmouseover="app.changeText2Color(this) " onmouseout="app.changeTextBack(this) " href="https://www.instagram.com/ "> Windows & Souls </a>
             </div>
         </div>
 
@@ -96,7 +99,8 @@
         </div>
     </div>
 
-    <script src="javascript-files/midterm.js "></script>
+    <script src="javascript-files/midterm.js"></script>
+
     <script>
         (function() {
             app.initialize();
