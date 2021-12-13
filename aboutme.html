@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> About Me Page</title>
+    <link rel="stylesheet" href="aboutme.css">
+    <!-- linking JQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Heading Section with nav bars -->
+    <div class="header">
+        <!--Top Nav section -->
+        <nav class="topNav">
+            <ul class="leftside">
+                <a href="homepage.html">
+                    <img class="signature" src="photos/Untitled_Artwork 48.png">
+                </a>
+            </ul>
+
+            <ul class="rightside">
+                <li class="item"> Resumé </li>
+                <li class="item">
+                    Design
+                    <ul class="dropdown">
+                        <li>Projects</li>
+                        <li><a href="graphic-design.html">Graphic Design</a></li>
+                        <li>
+                            <a href="filmroll.html">Film Rolls</a>
+                        </li>
+                    </ul>
+
+                    <li class="item">
+                        <a href="midterm.html"> Studio Art </a>
+                    </li>
+
+                    <li class="item"> Collection </li>
+                    <li class="item">
+                        <a href="aboutme.html">About </a> </li>
+                    <li class=" item ">
+                        <a href="contact.html "> Contact </a> </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!-- contentful apis -->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script>
+        var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below
+    </script>
+    <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js"></script>
+
+    <!-- Mustache API -->
+    <script src="https://unpkg.com/mustache@latest">
+    </script>
+
+    <!-- linking the JS file  -->
+    <script src="javascript-files/aboutme.js"></script>
+
+    <script>
+        (function() {
+            app.initialize();
+            // project id you get from contentful
+            app.getEntry('5uF7MrqugvGBrSi9mXt5QX');
+        })();
+    </script>
+
+</body>
+
+</html>

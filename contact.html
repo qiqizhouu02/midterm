@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Midterm Portfolio</title>
     <link rel="stylesheet" href="contact.css">
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js">
+    </script>
 
 </head>
 
@@ -48,26 +50,48 @@
     <div id='headtext'>
         <h2>Contact Me</h2>
         <p> Leave me a message for feedback, business inquires, or just to say hello! </p>
-        <!-- </div>
+    </div>
 
-    <input class="firstName" type="text">
-    <input class="lastName" type="text">
-    <input class="eMail" type="text">
-    <input class="Phone" type="text">
-    <input class="Message" type="text">
+    <div class="form">
+        <li class="label">
+            <label for="firstName">Name</label>
+        </li>
+        <li class="box">
+            <input class="firstName" type="text" id="fname" placeholder="Your name..">
+        </li>
 
-    <div class="results"> </div> -->
-        <script src="http://code.jquery.com/jquery-2.0.3.min.js">
-        </script>
-        <script src=" /javascript-files/contact.js ">
-        </script>
-        <!-- <script>
+        <li class="label">
+            <label for="eMail"> Email</label>
+        </li>
+        <li class="box"></li>
+        <input class="eMail" type="text" id="eMail" placeholder="Your email..">
+        </li>
+
+        <li class="label">
+            <label for="Message"> Message </label>
+        </li>
+        <li class="box">
+            <input class="Message" type="text" id="Message" style="height:200px" placeholder="Write anything..">
+        </li>
+
+        <li class="box">
+            <button class="submit" id="Submit" input class="submit">Submit</button>
+        </li>
+
+        <div id="results"> </div>
+
+    </div>
+
+    <script src="javascript-files/contact.js">
+    </script>
+    <script>
         $(document).ready(function() {
             console.log("Loaded!");
             app.initialize();
         });
-    </script> -->
-        <script src="https://sheetdb.io/s/f/xhe9sd4evai62.js"></script>
+    </script>
+
+    <!-- <script src="https://sheetdb.io/s/f/xhe9sd4evai62.js"></script>  premade form -->
 </body>
 
 <footer>
@@ -85,5 +109,7 @@
     </div>
 
 </footer>
+
+</html>
 
 </html>

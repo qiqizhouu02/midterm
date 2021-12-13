@@ -121,74 +121,6 @@ p {
     font-weight: 500px;
 }
 
-
-/* Container for Images */
-
-.Images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 30px;
-    gap: 1em;
-}
-
-
-/* Create 2 equal columns*/
-
-.Figure {
-    max-width: 100%;
-    position: relative;
-    flex: 25%;
-}
-
-.Figure:hover .overlay {
-    opacity: 1;
-}
-
-
-/* image formatting */
-
-.pics {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-    height: 400px;
-    overflow: hidden;
-    object-fit: cover;
-}
-
-
-/* hovering effect */
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.5)
-}
-
-.text {
-    color: white;
-    font-size: 30px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-
-/* Social Media Footer */
-
 .social-icons {
     display: block;
     flex-direction: row;
@@ -214,6 +146,9 @@ p {
     transform: scale(1.3);
     transition-duration: 0.2s;
 }
+
+
+/* Formating for Main Elements */
 
 @media only screen and (max-width: 800px) {
     .header {
