@@ -21,11 +21,13 @@ const app = {
         };
 
         app.client.getEntry(entry).then(project => {
+            debugger;
             const projectData = {
-                title: project.fields.title,
+                title: project.fields.projectTitle,
                 imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
                 imageTitle: project.fields.projectMedia.fields.title,
-                description: project.fields.description ? documentToHtmlString(project.fields.description, options) : '' // passing in the options obj i created above for the bug
+                description: project.fields.projectDescription ?
+                    documentToHtmlString(project.fields.projectDescription, options) : '' // passing in the options obj i created above for the bug
             };
             // load the template for this item from a local file
             fetch('aboutMe.mustache')
@@ -50,9 +52,10 @@ const app = {
                 // pull out the data you're interested in
                 debugger;
                 const projectData = {
-                    title: project.fields.title,
+                    title: project.fields.projectTitle,
                     imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
                     imageTitle: project.fields.projectMedia.fields.title,
+                    description: project.fields.projectDescription,
                     slug: `${project.fields.slug}.html`
                 };
                 const rendered = Mustache.render(template, projectData);
@@ -75,6 +78,7 @@ const app = {
                     title: project.fields.title,
                     imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
                     imageTitle: project.fields.projectMedia.fields.title,
+                    description: project.fields.projectDescription,
                     slug: `${project.fields.slug}.html`
                 };
                 const rendered = Mustache.render(template, projectData);
@@ -84,6 +88,28 @@ const app = {
         });
     },
 
-    loadTemplateAboutMe: () => fetch('../aboutMe.mustache').then(response => response.text()).then(template => template)
+    loadTemplateAboutMe: () => fetch('aboutMe.mustache').then(response => response.text()).then(template => template)
 
 };
+
+// modal image
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("media");
+var modalImg = document.getElementById("media");
+img.onclick = function() {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
