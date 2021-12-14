@@ -23,8 +23,8 @@ const app = {
         app.client.getEntry(entry).then(project => {
             const projectData = {
                 title: project.fields.title,
-                imageUrl: `http:${project.fields.image.fields.file.url}`,
-                imageTitle: project.fields.image.fields.title,
+                imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
+                imageTitle: project.fields.projectMedia.fields.title,
                 description: project.fields.description ? documentToHtmlString(project.fields.description, options) : '' // passing in the options obj i created above for the bug
             };
             // load the template for this item from a local file
@@ -51,7 +51,7 @@ const app = {
                 debugger;
                 const projectData = {
                     title: project.fields.title,
-                    imageUrl: `http:${project.fields.image.fields.file.url}`,
+                    imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
                     imageTitle: project.fields.image.fields.title,
                     slug: `${project.fields.slug}.html`
                 };
@@ -84,6 +84,6 @@ const app = {
         });
     },
 
-    loadTemplateAboutMe: () => fetch('aboutMe.mustache').then(response => response.text()).then(template => template)
+    loadTemplateAboutMe: () => fetch('../aboutMe.mustache').then(response => response.text()).then(template => template)
 
 };
