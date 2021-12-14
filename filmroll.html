@@ -22,7 +22,9 @@
             </ul>
 
             <ul class="rightside">
-                <li class="item"> Resumé </li>
+                <li class="item">
+                    <a href="resume.html"> Resumé </a>
+                </li>
                 <li class="item">
                     Design
                     <ul class="dropdown">
@@ -33,13 +35,15 @@
                         </li>
                     </ul>
 
-                    <li class=" item ">
-                        <a href="midterm.html "> Studio Art </a>
+                    <li class="item">
+                        <a href="midterm.html"> Studio Art </a>
                     </li>
 
-                    <li class="item "> Collection </li>
-                    <li class="item "> About </li>
-                    <li class="item "> Contact </li>
+                    <li class="item"> Collection </li>
+                    <li class="item">
+                        <a href="aboutme.html">About </a> </li>
+                    <li class="item">
+                        <a href="contact.html"> Contact </a> </li>
             </ul>
         </nav>
     </div>
@@ -94,7 +98,19 @@
     </div>
     </div>
 
+ <!-- contentful apis -->
+ <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js "></script>
+ <script>
+     var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below
+ </script>
+ <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js "></script>
 
+ <!-- Mustache API -->
+ <script src="https://unpkg.com/mustache@latest ">
+ </script>
+
+ <!-- linking the JS file  -->
+ <script src="javascript-files/filmroll.js "></script>
 </body>
 
 <footer>
