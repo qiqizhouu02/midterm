@@ -19,6 +19,7 @@ const app = {
                 }
             }
         };
+
         app.client.getEntry(entry).then(project => {
             const projectData = {
                 title: project.fields.title,
@@ -38,50 +39,50 @@ const app = {
         });
     },
 
-    // getAllEntries: async() => {
-    //     // first make sure we have our template loaded
-    //     // i can use the word await along with async to pause the program until this function is finished
-    //     const template = await app.loadTemplateAboutMe();
-    //     // fetch all entries
-    //     app.client.getEntries().then(response => {
-    //         // go through each one
-    //         response.items.forEach(project => {
-    //             // pull out the data you're interested in
-    //             debugger;
-    //             const projectData = {
-    //                 title: project.fields.title,
-    //                 imageUrl: `http:${project.fields.image.fields.file.url}`,
-    //                 imageTitle: project.fields.image.fields.title,
-    //                 slug: `${project.fields.slug}.html`
-    //             };
-    //             const rendered = Mustache.render(template, projectData);
-    //             // add the element to the container
-    //             $('.container').append(rendered);
-    //         });
-    //     });
-    // },
+    getAllEntries: async() => {
+        // first make sure we have our template loaded
+        // i can use the word await along with async to pause the program until this function is finished
+        const template = await app.loadTemplateAboutMe();
+        // fetch all entries
+        app.client.getEntries().then(response => {
+            // go through each one
+            response.items.forEach(project => {
+                // pull out the data you're interested in
+                debugger;
+                const projectData = {
+                    title: project.fields.title,
+                    imageUrl: `http:${project.fields.image.fields.file.url}`,
+                    imageTitle: project.fields.image.fields.title,
+                    slug: `${project.fields.slug}.html`
+                };
+                const rendered = Mustache.render(template, projectData);
+                // add the element to the container
+                $('.container').append(rendered);
+            });
+        });
+    },
 
-    // getEntriesByTag: async tag => {
-    //     // first make sure we have our template loaded
-    //     // i can use the word await along with async to pause the program until this function is finished
-    //     const template = await app.loadTemplateAboutMe();
-    //     // fetch entries with a specfic tag
-    //     app.client.getEntries({ 'metadata.tags.sys.id[in]': tag }).then(response => {
-    //         // go through each one
-    //         response.items.forEach(project => {
-    //             // pull out the data you're interested in
-    //             const projectData = {
-    //                 title: project.fields.title,
-    //                 imageUrl: `http:${project.fields.image.fields.file.url}`,
-    //                 imageTitle: project.fields.image.fields.title,
-    //                 slug: `${project.fields.slug}.html`
-    //             };
-    //             const rendered = Mustache.render(template, projectData);
-    //             // add the element to the container
-    //             $('.container').append(rendered);
-    //         });
-    //     });
-    // },
+    getEntriesByTag: async tag => {
+        // first make sure we have our template loaded
+        // i can use the word await along with async to pause the program until this function is finished
+        const template = await app.loadTemplateAboutMe();
+        // fetch entries with a specfic tag
+        app.client.getEntries({ 'metadata.tags.sys.id[in]': tag }).then(response => {
+            // go through each one
+            response.items.forEach(project => {
+                // pull out the data you're interested in
+                const projectData = {
+                    title: project.fields.title,
+                    imageUrl: `http:${project.fields.image.fields.file.url}`,
+                    imageTitle: project.fields.image.fields.title,
+                    slug: `${project.fields.slug}.html`
+                };
+                const rendered = Mustache.render(template, projectData);
+                // add the element to the container
+                $('.container').append(rendered);
+            });
+        });
+    },
 
     loadTemplateAboutMe: () => fetch('aboutMe.mustache').then(response => response.text()).then(template => template)
 
