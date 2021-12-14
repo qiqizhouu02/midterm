@@ -84,6 +84,6 @@ const app = {
         });
     },
 
-    loadTemplateAboutMe: () => fetch('aboutMe.mustache').then(response => response.text()).then(template => template)
+    loadTemplateAboutMe: () => fetch('../aboutMe.mustache').then(response => response.text()).then(template => template)
 
 };
