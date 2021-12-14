@@ -52,7 +52,7 @@ const app = {
                 const projectData = {
                     title: project.fields.title,
                     imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
-                    imageTitle: project.fields.image.fields.title,
+                    imageTitle: project.fields.projectMedia.fields.title,
                     slug: `${project.fields.slug}.html`
                 };
                 const rendered = Mustache.render(template, projectData);
@@ -73,8 +73,8 @@ const app = {
                 // pull out the data you're interested in
                 const projectData = {
                     title: project.fields.title,
-                    imageUrl: `http:${project.fields.image.fields.file.url}`,
-                    imageTitle: project.fields.image.fields.title,
+                    imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
+                    imageTitle: project.fields.projectMedia.fields.title,
                     slug: `${project.fields.slug}.html`
                 };
                 const rendered = Mustache.render(template, projectData);
@@ -84,6 +84,6 @@ const app = {
         });
     },
 
-    loadTemplateAboutMe: () => fetch('../aboutMe.mustache').then(response => response.text()).then(template => template)
+    loadTemplateAboutMe: () => fetch('aboutMe.mustache').then(response => response.text()).then(template => template)
 
 };
