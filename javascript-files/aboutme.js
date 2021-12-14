@@ -15,7 +15,7 @@ const app = {
         const options = {
             renderNode: {
                 'embedded-asset-block': ({ data: { target: { fields } } }) => {
-                    return `<img src="${fields.file.url}" height="${fields.file.details.image.height}" width="${fields.file.details.image.width}" alt="${fields.description}"/>`;
+                    return `<img src="${fields.file.url}" height="${fields.file.details.projectMedia.height}" width="${fields.file.details.projectMedia.width}" alt="${fields.description}"/>`;
                 }
             }
         };
