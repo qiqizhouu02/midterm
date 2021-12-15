@@ -15,7 +15,7 @@ const app = {
         const options = {
             renderNode: {
                 'embedded-asset-block': ({ data: { target: { fields } } }) => {
-                    return `<img src="${fields.file.url}" height="${fields.file.details.Row1.height}" width="${fields.file.details.Row1.width}" alt="${fields.description}"/>`;
+                    return `<img src="${fields.file.url}" height="${fields.height}" width="${fields.width}" alt="${fields.description}"/>`;
                 }
             }
         };
@@ -25,6 +25,8 @@ const app = {
             const projectData = {
                 title: project.fields.pageTitle,
                 images: project.fields.row1,
+                images2: project.fields.row2,
+                images3: project.fields.row3,
 
             };
             // load the template for this item from a local file
@@ -43,24 +45,11 @@ const app = {
 
 };
 
-// modal image
-
-// // Get the modal
-// var modal = document.getElementById("myModal");
-
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.getElementById("media");
-// var modalImg = document.getElementById("media");
-// img.onclick = function() {
-//     modal.style.display = "block";
-//     modalImg.src = this.src;
-//     captionText.innerHTML = this.alt;
-// }
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//     modal.style.display = "none";
-// }
+// now trying to do the modal image thing
+// const images = document.querySelectorAll('.pics');
+// images.forEach(image => {
+//     image.addEventListener('click', e => {
+//         debugger;
+//         modalImg.src = e.currentTarget.src
+//     })
+// })

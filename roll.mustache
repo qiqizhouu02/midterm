@@ -1,11 +1,22 @@
-<div class="pageTitle">
+{{! <div class="pageTitle">
   {{ title }}
-</div>
+{{! </div> }} 
 
-
+<div class ="gallery">
 <div class="Row1" id="media">
 {{#images}}
   <img class= "pics" src="http://{{fields.file.url}}" title={{fields.title}} />
 {{/images}}
+</div>
+<div class="Row2" id="media">
+{{#images2}}
+  <img class= "pics" src="http://{{fields.file.url}}" title={{fields.title}} />
+{{/images2}}
+</div>
+<div class="Row3" id="media">
+{{#images3}}
+  <img class= "pics" src="http://{{fields.file.url}}" title={{fields.title}} />
+{{/images3}}
+</div>
 </div>
 

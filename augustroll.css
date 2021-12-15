@@ -33,6 +33,7 @@ body {
     height: 50px;
     padding: 15px;
     background-color: #93A8BB;
+    box-sizing: border-box;
 }
 
 .topNav :hover {
@@ -123,14 +124,19 @@ p {
 
 /* Film Roll Gallery */
 
-.container {
-    max-width: 1000px;
-    text-align: center;
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    gap: 1em;
 }
 
 .pics {
-    width: 650px;
-    height: 400px;
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
     overflow: hidden;
     object-fit: cover;
 }
