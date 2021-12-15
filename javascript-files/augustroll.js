@@ -46,10 +46,20 @@ const app = {
 };
 
 // now trying to do the modal image thing
-// const images = document.querySelectorAll('.pics');
-// images.forEach(image => {
-//     image.addEventListener('click', e => {
-//         debugger;
-//         modalImg.src = e.currentTarget.src
-//     })
-// })
+
+const images = document.querySelectorAll('.pics');
+images.forEach(image => {
+    image.addEventListener('click', e => {
+        debugger;
+        modalImg.src = e.currentTarget.src
+    })
+
+    fetch('roll.mustache')
+        .then(response => response.text())
+        .then(template => {
+            // render the template with the data
+            const rendered = Mustache.render(template, projectData);
+            // add the element to the container
+            $('.container').append(rendered);
+        });
+})

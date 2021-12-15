@@ -142,6 +142,9 @@ p {
 }
 
 
+/* modal images  */
+
+
 /* Social Media Footer */
 
 .social-icons {
@@ -205,5 +208,9 @@ p {
     }
     a {
         color: #FFFFFF;
+    }
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
     }
 }
