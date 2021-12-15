@@ -1,6 +1,6 @@
 const app = {
 
-    newTextColor: 'blue',
+    newTextColor: '#94A7BB',
     oldTextColor: 'white',
 
     initialize: function() {
@@ -27,18 +27,3 @@ const app = {
         event.style.color = this.oldTextColor;
     }
 }
-
-
-// const app = {
-//     initialize: function() {}
-
-// }
-
-// $(document).ready(function() {
-//     $("figure").mouseover(function() {
-//         $(this).addClass("overlay", "text");
-//     });
-//     $("figure").mouseleave(function() {
-//         $(this).removeClass("overlay", "text");
-//     });
-// });

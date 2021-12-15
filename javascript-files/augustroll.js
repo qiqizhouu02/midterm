@@ -15,7 +15,7 @@ const app = {
         const options = {
             renderNode: {
                 'embedded-asset-block': ({ data: { target: { fields } } }) => {
-                    return `<img src="${fields.file.url}" height="${fields.file.details.projectMedia.height}" width="${fields.file.details.projectMedia.width}" alt="${fields.description}"/>`;
+                    return `<img src="${fields.file.url}" height="${fields.file.details.Row1.height}" width="${fields.file.details.Row1.width}" alt="${fields.description}"/>`;
                 }
             }
         };
@@ -23,14 +23,12 @@ const app = {
         app.client.getEntry(entry).then(project => {
             debugger;
             const projectData = {
-                title: project.fields.projectTitle,
-                imageUrl: `http:${project.fields.projectMedia.fields.file.url}`,
-                imageTitle: project.fields.projectMedia.fields.title,
-                description: project.fields.projectDescription
+                title: project.fields.pageTitle,
+                images: project.fields.row1,
 
             };
             // load the template for this item from a local file
-            fetch('aboutMe.mustache')
+            fetch('roll.mustache')
                 .then(response => response.text())
                 .then(template => {
                     // render the template with the data
@@ -41,7 +39,7 @@ const app = {
         });
     },
 
-    loadTemplateAboutMe: () => fetch('../aboutMe.mustache').then(response => response.text()).then(template => template)
+    loadTemplateRoll: () => fetch('roll.mustache').then(response => response.text()).then(template => template)
 
 };
 
@@ -62,7 +60,7 @@ const app = {
 // // Get the <span> element that closes the modal
 // var span = document.getElementsByClassName("close")[0];
 
-// // When the user clicks on <span> (x), close the modal
+// When the user clicks on <span> (x), close the modal
 // span.onclick = function() {
 //     modal.style.display = "none";
 // }

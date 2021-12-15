@@ -22,7 +22,9 @@
             </ul>
 
             <ul class="rightside">
-                <li class="item"> Resumé </li>
+                <li class="item">
+                    <a href="resume.html"> Resume </a>
+                </li>
                 <li class="item">
                     Design
                     <ul class="dropdown">
@@ -38,8 +40,10 @@
                     </li>
 
                     <li class="item"> Collection </li>
-                    <li class="item"> About </li>
-                    <li class="item"> Contact </li>
+                    <li class="item">
+                        <a href="aboutme.html">About </a> </li>
+                    <li class="item">
+                        <a href="contact.html"> Contact </a> </li>
             </ul>
         </nav>
     </div>
@@ -52,8 +56,8 @@
 
         <h3> Red Moon Exhibition Ticket Design </h3>
         <p1>Made with Figma & Procreate</p1>
-        <img class="center_image" src="design photos/red moon front.jpg" Alt="Red Moon Front">
-        <img class="center_image" src="design photos/red moon back.jpg" Alt="Red Moon Back">
+        <img class="center_image" src="design photos/red moon front.jpg" Alt="Red Moon Front" id="prog">
+        <img class="center_image" src="design photos/red moon back.jpg" Alt="Red Moon Back" id="prog2">
 
         <p2> For the first concept I went for a more minimalistic vibe to fit the fictional artist. The ticket design features red, white, and black as to not be so in your face.
         </p2>
@@ -78,6 +82,15 @@
         <p2> A music platform proposal that I created in hopes that music could bring people together, but also give light to uprising artists. A community for artists and listeners.
         </p2>
     </div>
+
+    <!-- modal images -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script src="javascript-files/project.js"></script>
 
     <footer>
         <div class="social-icons">
