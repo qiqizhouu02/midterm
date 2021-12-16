@@ -170,7 +170,7 @@ p {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgba(0, 0, 0, 0.5)
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .text {
@@ -183,7 +183,10 @@ p {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
-    cursor: pointer;
+}
+
+a {
+    cursor: hand;
 }
 
 
